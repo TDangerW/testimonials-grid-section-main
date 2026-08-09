@@ -1,13 +1,35 @@
 .container {
     display: grid;
+    width: fit-content;
+    padding: 2px;
+
+    @media screen and (min-width: 321px) {
+        padding: 3px;
+    }
+
+    @media screen and (min-width: 376px) {
+        padding: 5px;
+    }
 
     @media screen and (min-width: 426px) {
         grid-template-columns: repeat(4, minmax(400px, 1fr));
+        padding: 20px;
+    }
+
+    @media screen and (min-width: 769px) {
+        padding: 40px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        padding: 60px;
+    }
+
+    @media screen and (min-width: 1441px) {
+        padding: 80px;
     }
 
     gap: 2em;
 
-    padding: 5rem;
     box-sizing: border-box;
 
 }
@@ -19,10 +41,21 @@
     box-sizing: border-box;
     display: grid;
     grid-row: span 3;
-}
 
-.card>div {
-    height: fit-content;
+    h1,
+    p {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h3,
+    h4 {
+        margin-block: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    div {
+        height: fit-content;
+    }
 }
 
 .card_header {
@@ -40,9 +73,6 @@
         align-content: center;
     }
 
-    h3 {
-        margin-block: 0;
-    }
 }
 
 
@@ -52,29 +82,71 @@
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: 90%;
-    /* color: rgb(255, 237, 255); */
-    /* color: rgb(250, 233, 255); */
-    color: rgb(238, 205, 255);
+
+    h3 {
+        color: rgb(238, 205, 255);
+    }
+
+    h4,
+    p {
+        color: rgb(228, 198, 234);
+    }
+
+    h1 {
+        color: rgb(255, 243, 255);
+    }
 }
 
 .middle-top {
     background-color: rgb(73, 85, 107);
-    color: aliceblue;
+
+    h3 {
+        color: rgb(230, 240, 255);
+    }
+
+    h4,
+    p {
+        color: rgb(225, 230, 235);
+    }
+
+    h1 {
+        color: aliceblue;
+    }
 }
 
-.right-top {
-    background-color: beige;
-    color: black;
-}
-
+.right-top,
 .left-bottom {
     background-color: white;
-    color: black;
+
+    h3 {
+        color: rgb(120, 125, 135);
+    }
+
+    h4,
+    p {
+        color: rgb(90, 95, 105);
+    }
+
+    h1 {
+        color: rgb(68, 74, 88);
+    }
 }
 
 .right-bottom {
     background-color: rgb(25, 31, 45);
-    color: white;
+
+    h3 {
+        color: rgb(230, 235, 240);
+    }
+
+    h4,
+    p {
+        color: rgb(220, 225, 235);
+    }
+
+    h1 {
+        color: rgb(200, 205, 215);
+    }
 }
 
 @media screen and (min-width: 426px) {
